@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <h2>{{ helloMessage }}</h2>
+    <h3>Here is a random cat fact: {{ catFact }}</h3>
   </div>
 </template>
 
@@ -10,7 +10,8 @@ export default {
   name: 'HelloWorld',
   data() {
     return {
-      helloMessage: ''
+      helloMessage: '',
+      catFact: 'Please wait for cat fact'
     }
   },
   props: {
@@ -20,6 +21,15 @@ export default {
     this.$hello_api.getHelloMessage().then(resp => {
       this.helloMessage = resp.message
     })
+
+    this.$hello_api.getCatFact().then(resp => {
+      this.catFact = resp.fact
+    })
+    .catch(err => {
+      console.log(err)
+      this.catFact = 'Sorry, could not fetch cat fact'
+    })
+
   }
 }
 </script>

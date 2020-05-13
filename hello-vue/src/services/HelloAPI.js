@@ -7,6 +7,12 @@ export default {
         return axios.get(base).then(response => {
             return response.data
         })
+    },
+
+    getCatFact() {
+        return axios.get(base + '/catFact').then(response => {
+            return response.data
+        })
     }
 }
 

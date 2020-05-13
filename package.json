@@ -3,11 +3,10 @@
     "description": "Hello World API",
     "author": "Clara",
     "dependencies": {
+        "axios": "^0.19.2",
         "express": "^4.16.4"
     },
     "scripts": {
         "start": "node ./server.js"
     }
 }
-
-
