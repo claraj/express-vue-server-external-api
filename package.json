@@ -3,7 +3,7 @@
     "description": "Hello World API",
     "author": "Clara",
     "dependencies": {
-        "axios": "^0.19.2",
+        "axios": "^0.21.1",
         "express": "^4.16.4"
     },
     "scripts": {
